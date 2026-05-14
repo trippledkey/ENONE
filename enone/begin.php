@@ -8,7 +8,7 @@ require_once 'functions.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Курсы - ENONE</title>
+    <title>О нас - ENONE</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -25,7 +25,7 @@ require_once 'functions.php';
                 <li><a href="teachers.php">Преподаватели</a></li>
                 <li><a href="contact.php">Контакты</a></li>
                 <li><a href="about.php">О нас</a></li>
-                <?php if (isLoggedIn()): ?>
+                 <?php if (isLoggedIn()): ?>
                     <li><a href="profile.php">Профиль</a></li>
                     <li><a href="logout.php">Выйти</a></li>
                 <?php else: ?>
@@ -37,23 +37,14 @@ require_once 'functions.php';
     </header>
 
     <main>
-        <section class="courses">
-            <h2>Наши курсы</h2>
-            <div class="course-grid">
-                <?php
-                $courses = getCourses();
-                foreach ($courses as $course) {
-                 
-                    echo '<div class="course-item">';
-                    echo '<h3>' . htmlspecialchars($course['course_name']) . '</h3>';
-                    echo '<p>' . htmlspecialchars($course['description']) . '</p>';
-                    echo '<p>Цена: ' . htmlspecialchars($course['price']) . ' рублей</p>';
-                    echo '<p>Преподаватель: ' . htmlspecialchars($course['first_name'] . ' ' . $course['last_name']) . '</p>';
-                    echo '<a href="begin.php" class="button">Подробнее</a>'; // Замените '#' на ссылку на страницу курса
-                    echo '</div>';
-                }
-                ?>
-            </div>
+        <section class="about">
+            <h2>begginer kurs</h2>
+            <!-- <p>
+                ENONE была основана в 2015 году группой энтузиастов, увлеченных английским языком и желанием сделать его доступным для всех. Наша миссия - предоставить качественное образование в удобной и интерактивной форме.
+            </p>
+            <p>
+                Мы предлагаем широкий спектр курсов, от начального до продвинутого уровня, разработанных опытными преподавателями. Наша цель - помочь вам достичь ваших целей в изучении английского языка, будь то для работы, учебы или путешествий.
+            </p> -->
         </section>
     </main>
 

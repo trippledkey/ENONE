@@ -82,3 +82,43 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <h1>Редактировать преподавателя</h1>
         </div>
         <nav>
+            <ul>
+                <li><a href="index.php">Главная</a></li>
+                <li><a href="manage_courses.php">Курсы</a></li>
+                <li><a href="manage_teachers.php">Преподаватели</a></li>
+                <li><a href="../logout.php">Выйти</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="edit-teacher">
+            <h2>Редактировать преподавателя</h2>
+            <?php if ($error): ?>
+                <p class="error"><?php echo $error; ?></p>
+            <?php endif; ?>
+            <?php if ($success): ?>
+                <p class="success"><?php echo $success; ?></p>
+            <?php endif; ?>
+            <form action="edit_teacher.php?id=<?php echo htmlspecialchars($teacher['teacher_id']); ?>" method="post" enctype="multipart/form-data">
+                <label for="first_name">Имя:</label>
+                <input type="text" id="first_name" name="first_name" value="<?php echo htmlspecialchars($teacher['first_name']); ?>" required>
+
+                <label for="last_name">Фамилия:</label>
+                <input type="text" id="last_name" name="last_name" value="<?php echo htmlspecialchars($teacher['last_name']); ?>" required>
+
+                <label for="experience">Стаж:</label>
+                <input type="number" id="experience" name="experience" value="<?php echo htmlspecialchars($teacher['experience']); ?>" required>
+
+                <label for="photo">Фото:</label>
+                <img src="../images/<?php echo htmlspecialchars($teacher['photo']); ?>" alt="<?php echo htmlspecialchars($teacher['first_name'] . ' ' . $teacher['last_name']); ?>" width="100">
+                <input type="file" id="photo" name="photo"> <!--  Разрешаем загрузить новое фото -->
+
+                <button type="submit">Сохранить изменения</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <?php echo date("Y"); ?> ENONE. Все права защищены.</p>
+    </footer>
+</body>
+</html>

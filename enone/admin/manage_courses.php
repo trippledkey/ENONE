@@ -79,12 +79,12 @@ if (isset($_GET['delete_id'])) {
         <p>&copy; <?php echo date("Y"); ?> ENONE. Все права защищены.</p>
     </footer>
     <script>
-        // Подтверждение удаления (необязательно, но рекомендуется)
+        // Подтверждение удаления 
         const deleteButtons = document.querySelectorAll('.delete-button');
         deleteButtons.forEach(button => {
             button.addEventListener('click', function(event) {
                 if (!confirm('Вы уверены, что хотите удалить этот курс?')) {
-                    event.preventDefault(); // Отменяем переход по ссылке, если пользователь отменил удаление
+                    event.preventDefault(); // Отменяем переход по ссылке если пользователь отменил удаление
                 }
             });
         });
