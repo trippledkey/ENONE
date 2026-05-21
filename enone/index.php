@@ -56,7 +56,7 @@ require_once 'functions.php';
                 echo '<h3>' . htmlspecialchars($course['course_name']) . '</h3>';
                 echo '<p>' . htmlspecialchars(substr($course['description'], 0, 100)) . '...</p>'; // Краткое описание
                 echo '<p>Преподаватель: ' . htmlspecialchars($course['first_name'] . ' ' . $course['last_name']) . '</p>';
-                echo '<a href="#" class="button">Подробнее</a>'; // Замените '#' на ссылку на страницу курса
+                echo '<a href="begin.php" class="button">Подробнее</a>'; // Замените '#' на ссылку на страницу курса
                 echo '</div>';
                 $count++;
               }

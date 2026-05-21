@@ -106,8 +106,57 @@ header nav .auth-buttons a:hover {
 /* Main Section */
 main {
     padding: 30px 0; /* Уменьшенный padding */
+    padding: 20px;
 }
 
+.button q {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 30px; /* Уменьшенный padding */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+.course {
+    margin: 20px 0;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background: #f9f9f9;
+}
+
+.course-content {
+    display: flex; /* Используем Flexbox для размещения изображения и текста */
+    align-items: flex-start; /* Выравнивание по верхнему краю */
+}
+
+.course img {
+    max-width: 30%;
+    height: auto;
+    margin-right: 20px; /* Отступ справа от изображения */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.course h2 {
+   color: #007bff;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.course p {
+     color: #000000;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: Arial, sans-serif; /* Выберите более подходящий шрифт */
+    text-align: left;
+}
 /* Hero Section */
 .hero {
     background: linear-gradient(135deg, #e6f2ff 0%, #f0f8ff 100%);
@@ -461,14 +510,16 @@ footer {
     background: #343a40;
     color: #fff;
     text-align: center;
-    padding: 20px 0; /* Уменьшенный padding */
+    padding: 10px; /* Уменьшенный padding */
     position: relative;
     width: 100%;
     margin-top: auto; /* Прижимаем footer к низу */
 }
 
+
 footer p {
     font-size: 1em;
+
 }
 
 /* Media Queries for Responsiveness */
@@ -575,4 +626,82 @@ footer p {
         width: 90%; /* Увеличенная ширина формы на маленьких экранах */
     }
 
+    .beginner h2 {
+        font-size: 1.2em; /* Еще меньше размер текста */
+        color: #dc3545;
+    }
 }
+
+.wrapper {
+      max-width: 650px;
+      margin: 60px auto;
+      padding: 40px 24px;
+      background: rgba(255,255,255,0.87);
+      border-radius: 18px;
+      box-shadow: 0 6px 32px rgba(23,72,180, 0.1);
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.7em;
+      color: #1748b4;
+      margin-bottom: 14px;
+      letter-spacing: -1px;
+      font-weight: 800;
+    }
+    .tagline {
+      font-size: 1.3em;
+      font-weight: 500;
+      color: #3b5ca0;
+      margin-bottom: 28px;
+    }
+    .about {
+      font-size: 1.09em;
+      margin-bottom: 30px;
+      line-height: 1.7;
+    }
+    .benefits {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 32px;
+    }
+    .card {
+      background: #f3f8ff;
+      border-left: 6px solid #1748b4;
+      border-radius: 12px;
+      padding: 18px 20px;
+      text-align: left;
+      box-shadow: 0 2px 6px rgba(160,160,255, 0.07);
+      font-size: 1em;
+    }
+    .card strong {
+      color: #1748b4;
+    }
+    .cta-btn {
+      display: inline-block;
+      padding: 16px 38px;
+      background: #1748b4;
+      color: #fff;
+      border: none;
+      border-radius: 32px;
+      font-size: 1.2em;
+      font-weight: 600;
+      cursor: pointer;
+      letter-spacing: 1px;
+      transition: background 0.25s, transform 0.16s;
+      box-shadow: 0 2px 16px rgba(23,72,180,0.11);
+      text-decoration: none;
+      margin-top: 15px;
+    }
+    .cta-btn:hover {
+      background: #1353e0;
+      transform: scale(1.03);
+    }
+    @media (max-width: 600px) {
+      .wrapper {
+        padding: 24px 6px;
+      }
+      h1 {
+        font-size: 2em;
+      }
+    }
